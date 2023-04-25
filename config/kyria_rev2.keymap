@@ -45,7 +45,7 @@
 	                                        &none         &trans        &trans        &trans  &trans        &trans  &trans  &kp C_MUTE    &kp N0      &none
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
 		};
 	};
 
