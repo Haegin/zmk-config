@@ -25,7 +25,7 @@
 			bindings = <
 	&mt LALT TAB   &kp APOS  &kp COMMA &kp DOT  &kp P          &kp Y                                                                             &kp F            &kp G            &kp C  &kp R  &kp L  &kp SLASH
 	&mt LCTRL ESC  &kp A     &kp O     &kp E    &kp U          &kp I                                                                             &kp D            &kp H            &kp T  &kp N  &kp S  &kp MINUS
-	&kp LSHFT      &kp SEMI  &kp Q     &kp J    &kp K          &kp X            &kp LSHFT        &kp LG(LS(N4))      &tog RAISE   &tog LOWER     &kp B            &kp M            &kp W  &kp V  &kp Z  &kp EQUAL
+	&kp LSHFT      &kp SEMI  &kp Q     &kp J    &kp K          &kp X            &kp LSHFT        &kp LG(LS(N4))      &zoommute    &kp LALT       &kp B            &kp M            &kp W  &kp V  &kp Z  &kp EQUAL
 	                                   &none    &mt LSHFT ESC  &mt LGUI SPACE   &mt LCTRL BSPC   &kp LG(SPACE)       &kp LC(B)    &lt RAISE TAB  &lt LOWER ENTER  &mt LALT SLASH   &none
 			>;
 
@@ -60,6 +60,8 @@
       label = "HPM_email";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
+      tap-ms = <20>;
+      wait-ms = <10>;
       bindings
         = <&kp H &kp A &kp R &kp R &kp Y>
         , <&kp AT>
@@ -72,6 +74,8 @@
       label = "RELAY_email";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
+      tap-ms = <20>;
+      wait-ms = <10>;
       bindings
         = <&kp H &kp A &kp R &kp R &kp Y &kp DOT>
         , <&kp P &kp O &kp R &kp T &kp E &kp R &kp MINUS &kp M &kp I &kp L &kp L &kp S>
@@ -86,6 +90,13 @@
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&kp P &kp A &kp N5 &kp N5 &kp W &kp O &kp R &kp D &kp N1 &kp N2>;
+    };
+
+    zoommute: zoommute {
+      label = "ZOOM_mute";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_press &kp LSHIFT &kp LGUI &kp A &macro_release &kp LSHIFT &kp LGUI &kp A>;
     };
   };
 };
